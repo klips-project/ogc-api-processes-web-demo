@@ -1,18 +1,12 @@
-# OpenLayers + Vite
+# OGC API Processes Demo
 
-This example demonstrates how the `ol` package can be used with [Vite](https://vitejs.dev/).
+Minimal demo based on OL to test OGC API Processes.
 
-To get started, run the following (requires Node 14+):
+## Dev Setup
 
-    npx create-ol-app my-app --template vite
+```shell
+npm i
+npm start
+```
 
-Then change into your new `my-app` directory and start a development server (available at http://localhost:5173):
-
-    cd my-app
-    npm start
-
-To generate a build ready for production:
-
-    npm run build
-
-Then deploy the contents of the `dist` directory to your server.  You can also run `npm run serve` to serve the results of the `dist` directory for preview.
+Open your browser on http://localhost:5173
