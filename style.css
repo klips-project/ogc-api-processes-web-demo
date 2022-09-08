@@ -3,7 +3,6 @@
 html, body {
   margin: 0;
   height: 100%;
-  overflow-wrap: break-word;
 }
 #main {
   width: 100%;
@@ -16,7 +15,10 @@ html, body {
 }
 #api-output {
   width: 400px;
-  max-width: 400px;
   display: table-cell;
   vertical-align: top;
 }
+
+code {
+  white-space: pre-line;
+ }
