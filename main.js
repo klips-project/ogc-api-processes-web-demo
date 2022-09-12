@@ -6,6 +6,9 @@ import { OSM, Vector as VectorSource } from 'ol/source';
 import { Tile as TileLayer, Vector as VectorLayer } from 'ol/layer';
 import GeoJSON from 'ol/format/GeoJSON';
 
+// const oapiProcessesUrl = "https://demo.pygeoapi.io/stable/processes/hello-world/execution";
+const oapiProcessesUrl = "http://localhost:5000/processes/hello-world/execution";
+
 const raster = new TileLayer({
   source: new OSM(),
 });
@@ -83,17 +86,16 @@ draw.on('drawend', (event) => {
     featureProjection: 'EPSG:3857'
   });
   const geoJsonGeom = formatGeoJson.writeGeometry(polygonFeature3857.getGeometry());
-  const url = "https://demo.pygeoapi.io/stable/processes/hello-world/execution";
+
   const payload = {
-    "mode": "async",
     "inputs": {
       "name": "Jakob",
-      "customGeom": {
-        "value": geoJsonGeom,
+      "inputGeom": {
+        "value": JSON.parse(geoJsonGeom),
         "mediaType": "application/geo+json"
       }
     }
   };
   console.log(payload);
-  requestOapiProcesses(url, payload)
+  requestOapiProcesses(oapiProcessesUrl, payload)
 })
