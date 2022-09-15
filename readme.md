@@ -1,6 +1,6 @@
 # OGC API Processes Demo
 
-Minimal demo based on OL to test OGC API Processes.
+Minimal demo based on OpenLayers to test OGC API Processes.
 
 ## Dev Setup
 
