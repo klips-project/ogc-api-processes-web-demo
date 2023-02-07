@@ -2,6 +2,8 @@
 
 Minimal demo based on OpenLayers to test OGC API Processes.
 
+**THIS REPO MOVED TO https://github.com/klips-project/klips-sdi/tree/main/demonstrator**
+
 ## Dev Setup
 
 ```shell
